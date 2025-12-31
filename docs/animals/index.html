@@ -1,40 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Save The Animals</title>
     <style>
         body {
-            background-color: skyblue;
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-
+        h1 {
+            color: darkblue;
+        }
         h2 {
             color: blue;
         }
 
         p {
-            color: black
+            color: black;
         }
-        href{color: black;}
-        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
     <body>
         <a href="../index.html">Home</a> > <a href="index.html">Animals</a>
-        <h1 style="color:darkblue"> Help Save The Animals</h1>
+        <h1>Help Save The Animals</h1>
+        <p>This is a web page about animals and their habitats.</p>
 
-        <h2> Animals are in danger! </h2>
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#danger">Animals are in danger!</a></li>
+            <li><a href="#video">Watch the video to learn more.</a></li>
+            <li><a href="#quiz">Test your knowledge with a quiz</a></li>
+            <li><a href="#help">What can you do to help?</a></li>
+        </ul>
 
-
+        <h2 id="danger">Animals are in danger!</h2>
         <p>Humans are causing lots of climate change.</p>
-        <P>Climate change is melting ice in the north pole.</P>
+        <p>Climate change is melting ice in the north pole.</p>
         <p>This is making lots of ice drift off into the ocean.</p>
-        <P>Some ice melts making rising sea levels causing floods.</P>
-        <img src="polarbear.avif">
-        <h2>Watch the video to learn more.</h2>
-
-        
-        <iframe width="163" height="280" src="https://www.youtube.com/embed/G93F5mbPp0A"></iframe>
-            <h2> Click the ? to play the quiz.</h2>
-            <a href="quiz.html">
-            <br>
-            <img src="question_mark.png">
-        </a>
-        
+        <p>Some ice melts making rising sea levels causing floods.</p>
+        <p>Climate change is also affecting animals in other ways.</p>
+        <p>Rising sea temperatures and melting ice are reducing the population of krill.</p>
+        <p>Krill are a main food source for many animals including penguins and whales.</p>
+        <img src="polarbear.avif" alt="A polar bear on ice" width="600">
+        <h2 id="video">Watch the video to learn more.</h2>
+        <iframe width="315" height="560" src="https://www.youtube.com/embed/G93F5mbPp0A" allowfullscreen></iframe>
+        <h2 id="quiz">Test Your Knowledge</h2>
+        <p>Click <a href="quiz.html">here</a> to play the quiz.</p>
+    </body>
+    <h2 id="help">What can you do to Help?</h2>
+    <p>There are many things you can do to help protect animals.</p>
+    <ul>
+        <li>Recycle paper, plastic, glass, and metal to reduce waste.</li>
+        <li>Use energy-efficient appliances and light bulbs to reduce energy consumption.</li>
+        <li>Conserve water by turning off taps when not in use and fixing leaks.</li>
+        <li>Reduce car travel by walking, biking, carpooling, or using public transportation.</li>
+        <li>Support wildlife conservation organizations through donations or volunteering.</li>
+    </ul>
+    
     </body>
 </html>

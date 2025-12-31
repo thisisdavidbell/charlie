@@ -1,15 +1,25 @@
 const quizdata = [
     {
-        question : "what is causing climate change?",
-        options : [ "thesun", "ants","humans", "sharks"],
+        question : "1. What is causing climate change?",
+        options : [ "the sun", "ants","humans", "sharks"],
         answer : "humans"
     },
     {
-        question : "what reflects the sun?",
-        options : [ "polarice", "water","peinguins"],
-        answer : "polarice"
+        question : "2. What reflects the sun?",
+        options : [ "polar ice", "water","peinguins"],
+        answer : "polar ice"
     },
-];
+    {
+        question : "3. The loss of which oceanic species is affecting whales and penguins?",
+        options : [ "plankton", "krill","algae"],
+        answer : "krill"
+    },
+    {
+        question : "4. Which of these is one of the effects of melting polar ice?",
+        options : [ "rising sea levels", "more fish","stronger storms"],
+        answer : "rising sea levels"
+    },
+]
 
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
@@ -23,10 +33,17 @@ function showQuestion() {
     questionElement.innerText = question.question;
 
     optionsElement.innerHTML = "";
-    question.options.forEach(option => {
+    // create a shuffled copy of the options so button order is random
+    const options = [...question.options];
+    for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+    }
+
+    options.forEach(option => {
         const button = document.createElement("button");
-        button.innerText = option
-        optionsElement.appendChild(button)
+        button.innerText = option;
+        optionsElement.appendChild(button);
         button.addEventListener("click", selectAnswer);
     });
 }
@@ -50,9 +67,43 @@ function selectAnswer(e) {
 }
 
 function showResult() {
-    quiz.innerHTML = `
+    // find an element with id="quiz" to show the result. If it doesn't exist,
+    // create one and append it to the document body.
+    const quizEl = document.getElementById('quiz') || (function() {
+        const d = document.createElement('div');
+        d.id = 'quiz';
+        document.body.appendChild(d);
+        return d;
+    })();
+
+    // display the result and add a button that allows the user to reload
+    // the page (so they can retake the quiz). The button has id="reloadBtn".
+    quizEl.innerHTML = `
         <h1>Quiz completed!</h1>
-        <p>your score: ${score}/${quizdata.length}</p>
+        <p>Your score: ${score}/${quizdata.length}</p>
+        <div style="display: flex; gap: 10px;">
+            <button id="reloadBtn">Play again</button>
+            <button id="openAnimalsIndexBtn">Open animals index</button>
+        </div>
     `;
+
+    // attach a click handler to the reload button that reloads the current
+    // page. This restarts the quiz by refreshing the entire page.
+    const reloadBtn = document.getElementById('reloadBtn');
+    if (reloadBtn) {
+        reloadBtn.addEventListener('click', function() {
+            // reload the page
+            location.reload();
+        });
+    }
+
+    // navigation button that opens the animals index page
+    const navBtn = document.getElementById('openAnimalsIndexBtn');
+    if (navBtn) {
+        navBtn.addEventListener('click', function() {
+            location.href = 'index.html';
+        });
+    }
 }
 showQuestion();
+ 
