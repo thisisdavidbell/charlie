@@ -6,7 +6,7 @@ const quizdata = [
     },
     {
         question : "2. What reflects the sun?",
-        options : [ "polar ice", "water","peinguins"],
+        options : [ "polar ice", "water","penguins"],
         answer : "polar ice"
     },
     {

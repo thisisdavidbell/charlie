@@ -3,4 +3,4 @@ Repo for Charlies coding projects
 
 # pages
 
-HTML is services up as github pages from the docs directory.
+HTML is served up as github pages from the docs directory.
