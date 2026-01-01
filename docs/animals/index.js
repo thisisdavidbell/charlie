@@ -83,7 +83,7 @@ function showResult() {
         <p>Your score: ${score}/${quizdata.length}</p>
         <div style="display: flex; gap: 10px;">
             <button id="reloadBtn">Play again</button>
-            <button id="openAnimalsIndexBtn">Open animals index</button>
+            <button id="openAnimalsIndexBtn">Go back to the animals page</button>
         </div>
     `;
 
