@@ -1,0 +1,11 @@
+name = input("what is your snake called? ")
+print("   00   ")
+print("    ||  ")
+print("    \\\\       <---- " + name)
+print("     \\\\ ")
+print("     //")
+print("     \\\\")
+print("      \\\\")
+print("       \\\\")
+print("       \\/")
+

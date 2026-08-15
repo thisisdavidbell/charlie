@@ -1,0 +1,5 @@
+middleName = input("what is your middle name :")
+pasta = input("what is your favorite pasta :")
+number = input("give me a number(max 4 digits) ")
+symbol = input("give me a symbol :")
+print("your pasword is "  + middleName + pasta + number + symbol)

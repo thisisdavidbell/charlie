@@ -1,0 +1,12 @@
+print('I went to the market and bought a...')
+a = input("type in something begining with a :")
+print('I went to the market and bought an '+ a +' and a...')
+b = input("type in something begining with b :")
+print('I went to the market and bought an '+ a + ', ' + b +' and a...')
+c = input("type in something begining with c :")
+print('I went to the market and bought an '+ a + ', ' + b  + ', ' + c +' and a...')
+d = input("type in something begining with d :")
+print('I went to the market and bought an '+ a  + ', ' + b  + ', ' + c  + ', ' + d +' and a...')
+e = input("type in something begining with e :")
+print('I went to the market and bought an :'+ a  + ', ' + b  + ', ' + c  + ', ' + d  + ', ' + e)
+

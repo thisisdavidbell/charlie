@@ -1,0 +1,6 @@
+print("what is your name?")
+name = input()
+print ("hello", name)
+print("how are you?")
+feeling = input()
+print("hey i'm feeling", feeling, "too")
