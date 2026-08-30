@@ -1,2 +1,0 @@
-/speckit.specify there is a folder called examples it contains 3 photos of what things look like. @file:player.png is what the player should look like except with a face and legs. @file:platform.png is what a platform should look like
- @file:flag.png the end flag should look like. the controls are. move right : right arrow or d. move left : left arrow or a. jump : up arrow, w ,or space bar.

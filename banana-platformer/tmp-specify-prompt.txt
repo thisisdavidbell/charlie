@@ -1,0 +1,38 @@
+/speckit.specify 
+
+Important terminology:
+- player - the human playing the banana platformer game
+- character - the banana sprite that the player controls, moving it round the level.
+- level - the area in which the character can move, which containers, the character, start, end, platforms, walls. 
+- platform - a horizontal element which players can stand on and not fall through, but which players can jump up through and land on. Levels have a small orange platform, which is where the character begins the level.
+- wall - a vertical element which players cannot pass through.
+- flag - an element of a level which marks the finish. It is the location the player is trying to navigate their character to, to complete a level.
+
+In the remains of this prompt, if there is any ambiguity about what element is being referred to, you must ask for clarification.
+
+there is a folder called examples.
+
+All example images are to provide guidance on the creation of game elements. They are not to be used as is. The background of all example images should be ignored.
+It contains 4 photos, which provide examples of how various aspects of the game should appear.
+@file:player.png is what the player's character should look like. It is a half peeled banana. The player character should also have a simple smiling face and legs. When the character moves, the legs should move. When the character changes direction to face left or right, the character should always change direction to face the direction they are moving in. This does not apply when jumping or falling, the character always faces left or right.
+
+@file:platform.png is what a platform should look like. In early levels, the level has a platform along the whole bottom, so you cannot fall out of the bottom of the level, and the player can see that they can move horizontally. In later levels, where the bottom of the level can have a gap, a player falling through the gap will die and respawn back in the starting position. There should be a delay of 2 seconds before the player reappears. A level has one or move additional platforms higher up, which characters can jump up to, or jump down from. The platforms are normally red, but an orange section of platform is where the character starts the level. This can be along the bottom, or anywhere within the level. The orange platform can never be a vertical wall. A player can never start a level on a wall, always a horizontal platform or midair. A player can jump through a higher platform to get on top of the platform from below. They can't fall through a platform. meaning its a vertical 1 way platform so you can get on through the bottom but it acts solid from above. This means a player can get to a higher platform by jumping, but can only get to a lower platform by falling off the side of their current platform.
+
+Gravity - levels have gravity. We are seeing the level from the side, so grvity exists pulling characters back down from the top of the screen towwards the bottom. ensuring that players remain touching the platform they are standing on. If a player jumps, they can jump up a short distance, before falling back down. The jump height is slightly higher than the difference in height between level platforms, allowing a player to jump up to the next platform up, but never 2 platforms up in one jump.
+
+The goal of a level is for the player to navigate their character to the end flag. the end flag should be a simple flag design with black and white checkers, as suggested by @file:flag.png.
+ 
+
+The controls the player uses to move their character are:  move right : right arrow or d move left : left arrow or a.
+jump : up arrow, w ,or space bar.
+the flag turns from black and white checkered to red and white checkered when the level is completed.
+
+The levels are small enough that the camera can be static but you can see the whole level. The whole level will be seen without the camera moving so no scrolling cameras allowed. A level takes up the whole playing screen. It is not possible for the player to move off the left or right sides of the screen. Vertical walls should be shown on the level to indicate this. Walls should be made of the same material as platforms, except it is never possible for a player to pass through a wall. The default background of all levels is plain black.
+
+
+A level can include a number of mini bananas. These are game elements that can be collected. In the initial vesion of the game, nothing happens when a mini banana is collected, except that the collected mini banana disappears. There is no count maintained, no score maintained. Collecting mini bananas is entirely optional. The mini bananas should look similar to the player character which is to be inspired by @file:player.png, but should not have the face, or legs. It should be around 50% of the size of the player. A mini banana is collected when the character overlaps the mini banana. A level should have a small number of mini bananas spread out along the route fom the starting location to the end at the flag. For example the very simple and short level 1 should perhaps only have 2 or 3 mini bananas.
+
+@file:level1.jpg provides inspiration for the main design of what level 1 should look like. Note the orange start platform in the bottom left. The finish flag is on a single small platform. The player will be able to jump and land on this platform. Overlapping the flag will complete the level. 
+
+Animations during the game: At the start "Level 1" will be displayed over the level, and will face away in the first 3 seconds. After the 3 seconds, the player character will appear on the start location, e.g. the orange section of platform. The character will appear out of the platform, as if coming through a portal on the platform. They will appear as if from below, but the character will not be visible below the platform.
+When the player completes a level, by the character overlapping the flag, the flag will change colour to white with red checkers. The words "Level 1 Completed" will slowly fall from the top of the screen in 3 seconds, coming to a stop in the middle of the screen. All text will be yellow, to match the banana theme, and be readable against the black background. All text should be ina black box. This will be invisible against the black background, but will allow the text to be read easily against the platforms, player banana, uncollected remaining mini bananas etc. After 3 seconds after the level is completed, the players character will disappear. This should happen with the player appearing to slide down into the floor, but not appear below the floor, which is the opposite of the start animation where the player appears. 
