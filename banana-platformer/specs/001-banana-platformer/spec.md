@@ -20,9 +20,10 @@ The player needs to control a banana character that moves left and right, jumps,
 
 **Acceptance Scenarios**:
 
-1. **Given** the level has loaded and the player character is on the start platform, **When** the player presses the right arrow or D, **Then** the character moves right and faces right while staying inside the level bounds.
-2. **Given** the player character is on a platform, **When** the player presses jump, **Then** the banana jumps upward, briefly travels upward against gravity, and lands back on the platform if the jump is not over a gap.
-3. **Given** the player character falls off the level or through a gap, **When** the character reaches a hazard area, **Then** the player is respawned at the start position after a 2 second delay.
+1. **Given** the level has loaded and the player character is on a platform, **When** the player presses the right arrow or D, **Then** the character moves right and faces right while staying inside the level bounds.
+2. **Given** the level has loaded and the player character is on a platform, **When** the player presses the left arrow or A, **Then** the character moves left and faces left while staying inside the level bounds.
+3. **Given** the player character is on a platform, **When** the player presses jump, **Then** the banana jumps upward, briefly travels upward against gravity, and lands back on the platform if the jump is not over a gap.
+4. **Given** the player character falls off the level or through a gap, **When** the character reaches a hazard area, **Then** the player is respawned at the start position after a 2 second delay.
 
 ---
 
@@ -52,7 +53,7 @@ The player is encouraged to collect optional mini bananas placed along the route
 
 **Acceptance Scenarios**:
 
-1. **Given** a mini banana is placed along the route, **When** the character overlaps it, **Then** the mini banana disappears and no score or count is shown.
+1. **Given** a mini banana is placed along the route, **When** the character overlaps it, **Then** the mini banana disappears.
 2. **Given** the character reaches the end flag, **When** they overlap the flag, **Then** the flag changes from black-and-white checkers to red-and-white checkers and the level is marked as complete.
 3. **Given** the level is complete, **When** the completion text appears, **Then** the player character eventually disappears with the intended slide-down effect after a short delay.
 
@@ -69,7 +70,7 @@ The player sees a clear level start and end presentation, including text and tra
 **Acceptance Scenarios**:
 
 1. **Given** the level begins, **When** the start sequence starts, **Then** the text "Level 1" appears and remains visible for the first 3 seconds.
-2. **Given** the start sequence ends, **When** the character appears, **Then** the banana emerges from the platform as if through a portal and is not shown below the platform.
+2. **Given** the start sequence ends, **When** the character appears, **Then** the banana emerges from the platform as rising from the ground and is not shown below the platform.
 3. **Given** the level is complete, **When** the end animation begins, **Then** the text "Level 1 Completed" falls from the top of the screen and settles in the middle before the character disappears.
 
 ---
@@ -91,7 +92,7 @@ The player sees a clear level start and end presentation, including text and tra
 - **FR-003**: The game MUST allow the player to move left and right using the left/right arrow keys or A/D, and jump using the up arrow, W, or Space.
 - **FR-004**: The game MUST apply gravity so the character falls toward the bottom of the level unless it is standing on a platform, and must remain grounded while touching a solid surface.
 - **FR-005**: The game MUST include horizontal platforms that are solid from above and allow the player to jump upward through a higher platform from below without falling through it.
-- **FR-006**: The game MUST include vertical walls that prevent the player from passing through them and clearly mark the left and right edges of the level.
+- **FR-006**: The game MUST include vertical walls (that look like platforms but turned a one-quarter turn) that prevent the player from passing through them and clearly mark the left and right edges of the level.
 - **FR-007**: The game MUST include a start platform that is orange and may be located along the bottom or in a higher part of the level, and the player must always begin on a horizontal platform rather than a wall.
 - **FR-008**: The game MUST include a finish flag of similar size to the character, using a black-and-white checker pattern before completion and a red-and-white checker pattern after completion.
 - **FR-009**: The game MUST complete the level when the character overlaps the flag, and must trigger the completion state immediately after overlap.
@@ -109,7 +110,7 @@ The player sees a clear level start and end presentation, including text and tra
 - **Player / Character**: The banana-controlled avatar used to move through the level, with movement state, facing direction, jump state, and respawn behavior.
 - **Level**: The complete playable area containing the start platform, additional platforms, walls, the finish flag, and optional mini bananas.
 - **Platform**: A solid horizontal surface the player can stand on, jump from, and jump through from below when attempting to reach a higher platform.
-- **Wall**: A solid vertical obstacle that prevents passing through the left or right boundaries and blocks lateral movement through level boundaries.
+- **Wall**: A solid vertical obstacle that looks like the platform but turned 90 degrees that prevents passing through the left or right boundaries and blocks lateral movement through level boundaries.
 - **Flag**: The level finish marker that begins in a black-and-white checkered state and changes to a red-and-white pattern when the player completes the level.
 - **Mini Banana**: A small collectible pickup inspired by the banana character but without a face or legs, placed along the route and removed when overlapped by the player.
 - **Respawn State**: The player reset condition triggered by falling out of the level or through a gap, delaying reappearance at the start platform.
