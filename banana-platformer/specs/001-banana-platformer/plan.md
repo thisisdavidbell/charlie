@@ -92,6 +92,10 @@ This section compares practical stacks for this project and user profile (non-te
 
 Choose **Option A: TypeScript + PixiJS + Vite + Vitest (+ Playwright smoke tests)**.
 
+**Decision Status**: Finalized for current implementation phase.
+
+**Fallback Note**: Keep Option B and Option C documented as contingency paths if Option A proves unsuitable during implementation or testing.
+
 Reasoning:
 - Most reliable and maintainable over time for adding features.
 - Easiest to test at both logic level and playable-browser level.
