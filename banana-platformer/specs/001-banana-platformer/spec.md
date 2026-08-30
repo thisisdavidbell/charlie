@@ -93,17 +93,32 @@ The player sees a clear level start and end presentation, including text and tra
 - **FR-004**: The game MUST apply gravity so the character falls toward the bottom of the level unless it is standing on a platform, and must remain grounded while touching a solid surface.
 - **FR-005**: The game MUST include horizontal platforms that are solid from above and allow the player to jump upward through a higher platform from below without falling through it.
 - **FR-006**: The game MUST include vertical walls (that look like platforms but turned a one-quarter turn) that prevent the player from passing through them and clearly mark the left and right edges of the level.
-- **FR-007**: The game MUST include a start platform that is orange and may be located along the bottom or in a higher part of the level, and the player must always begin on a horizontal platform rather than a wall.
+- **FR-007**: The game MUST include a start platform that is the left-end section of the full-width floor platform, coloured orange. The player must always begin standing on this orange section.
 - **FR-008**: The game MUST include a finish flag of similar size to the character, using a black-and-white checker pattern before completion and a red-and-white checker pattern after completion.
 - **FR-009**: The game MUST complete the level when the character overlaps the flag, and must trigger the completion state immediately after overlap.
 - **FR-010**: The game MUST respawn the player at the start position after falling through a gap or other out-of-bounds hazard, with a 2 second delay before reappearing.
-- **FR-011**: The game MUST place a small number of optional mini bananas along the route from the start to the finish, with each banana disappearing when collected.
+- **FR-011**: The game MUST automatically place optional mini bananas spaced exactly one banana-character-height apart, forming a continuous visible trail along the route from the start position to the finish flag. Each mini banana disappears when the player overlaps it.
 - **FR-012**: The game MUST show a start animation that displays "Level 1" for the first 3 seconds and reveals the player character emerging from the platform after that interval.
 - **FR-013**: The game MUST show a completion animation that displays "Level 1 Completed" falling from the top of the screen and settling near the middle before the player character disappears.
 - **FR-014**: All on-screen text MUST use yellow text on a black framed box with high enough visibility against the black background and game art.
 - **FR-015**: The default level background MUST be plain black and all example images must be treated as artistic visual hints only. The dimensions of the example images are not relevant and must not be used to infer the size of any game element; the images illustrate the intended look and style, not the scale.
 - **FR-016**: The game MUST not maintain a score or collection counter, and collecting mini bananas MUST be optional without affecting the win condition or level progression.
 - **FR-017**: The game MUST keep the level small enough and readable enough that the whole area fits within a static view without camera scrolling.
+- **FR-018**: The banana character, the finish flag, and all platforms MUST each have a height equal to 1/6 of the screen height. All three elements share this same height value.
+- **FR-019**: Walls MUST have a width equal to the banana character's height (i.e. 1/6 of the screen height) and MUST be placed automatically to bound the left and right edges of the level.
+- **FR-020**: Mini bananas MUST be half the size of the banana character in both width and height.
+- **FR-021**: The banana character's maximum jump height MUST be enough to land on the elevated platform with 1/4 of the banana character's own height of clearance above the platform's top surface at the peak of the jump.
+
+### Level Layout
+
+The level layout is based on the hand-drawn sketch in `examples/level1.jpg`. The sketch dimensions are not a guide to sizing; refer to FR-018 through FR-021 for all measurements.
+
+- **Floor platform**: A single platform that spans the full width of the level along the bottom of the screen. The left-end section is coloured orange and is the player's start position.
+- **Elevated platform**: One floating platform, roughly centred horizontally and positioned at approximately mid-screen height. The finish flag sits on top of this platform. The player must jump up from the floor to reach it.
+- **Left wall and right wall**: Automatically placed at the left and right edges of the level to bound the play area.
+- **Mini banana trail**: Mini bananas are automatically placed one banana-height apart along the route from the start: across the floor toward the elevated platform, then across the elevated platform toward the finish flag.
+
+---
 
 ### Key Entities
 
