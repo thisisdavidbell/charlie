@@ -101,7 +101,7 @@ The player sees a clear level start and end presentation, including text and tra
 - **FR-012**: The game MUST show a start animation that displays "Level 1" for the first 3 seconds and reveals the player character emerging from the platform after that interval.
 - **FR-013**: The game MUST show a completion animation that displays "Level 1 Completed" falling from the top of the screen and settling near the middle before the player character disappears.
 - **FR-014**: All on-screen text MUST use yellow text on a black framed box with high enough visibility against the black background and game art.
-- **FR-015**: The default level background MUST be plain black and all example images must be treated as references rather than direct assets to be copied.
+- **FR-015**: The default level background MUST be plain black and all example images must be treated as artistic visual hints only. The dimensions of the example images are not relevant and must not be used to infer the size of any game element; the images illustrate the intended look and style, not the scale.
 - **FR-016**: The game MUST not maintain a score or collection counter, and collecting mini bananas MUST be optional without affecting the win condition or level progression.
 - **FR-017**: The game MUST keep the level small enough and readable enough that the whole area fits within a static view without camera scrolling.
 
@@ -130,5 +130,5 @@ The player sees a clear level start and end presentation, including text and tra
 - The initial version of the game targets a single short level, not a multi-level progression system.
 - The intended audience is a casual player who can understand simple platformer controls immediately.
 - The project focuses on a retro 2D arcade feel rather than realism, so collision rules and sprite styling are intentionally simple and readable.
-- Artwork will be designed in-house using the reference examples as visual guidance, not as exact source assets.
+- Artwork will be designed in-house using the reference examples as visual guidance for style and appearance only, not as exact source assets. The pixel dimensions of the example images carry no meaning and must not be used to determine the size of any character, platform, flag, or other game element.
 - The project does not require a score system, a time penalty, or a collectible counter for the MVP.
