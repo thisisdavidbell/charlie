@@ -4,6 +4,26 @@ This directory containers a platform game generated using Spec-Driven Developmen
 
 The game is Banana Platformer - a game where the user moves a banana through a 2d level to the finish.
 
+# How To Run The Game
+
+requirements:
+- Node.js installed
+- npm installed
+
+From this directory, run (in the terminal):
+(dont write    git npm install or git npm run dev. just write it on its own)
+- npm install
+- npm run dev
+
+Then open the local URL shown in the terminal, usually:
+
+http://localhost:5173
+
+Optional commands:
+- Run tests: npm run test
+- Run lint checks: npm run lint
+- Create production build: npm run build
+
 # Current Status
 
 - Consitution completed
