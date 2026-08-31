@@ -9,13 +9,8 @@ The game is Banana Platformer - a game where the user moves a banana through a 2
 - Consitution completed
 - Specification completed
 - plan complete
-- checklist step - in progress
+- checklist step - completed
     - gameplay.md created with checklist.
-    - AI checked 14, leaving 11 needed discussion and clarity.
-    - AI summary of highest priority outstanding issues was:
-        - Ambiguous wording around full-screen, visibility, centered placement, hazard boundary.
-        - Success criteria measurement method not fully defined.
-        - Recovery details after respawn not fully explicit.
-        - Non-functional requirements: responsiveness thresholds, browser compatibility details, accessibility expectations.
-        - Traceability mapping process between requirements and tests.
-    - NEXT STEP: discuss remaining uncheck items with AI, before moving to tasks phase.
+    - chat clarifications were written back into the spec, plan, tasks, and constitution.
+    - tasks.md created with implementation phases and traceability hooks.
+    - README status kept in sync with the current speckit artifacts.

@@ -87,7 +87,7 @@ The player sees a clear level start and end presentation, including text and tra
 
 ### Functional Requirements
 
-- **FR-001**: The game MUST present a single playable level in a fixed full-screen view with no camera scrolling.
+- **FR-001**: The game MUST present a single playable level in a fixed full-screen view with no camera scrolling, and the full level must remain visible without any camera movement.
 - **FR-002**: The game MUST render the player character as a banana sprite inspired by the provided example, with a simple smiling face, legs, and a direction-facing rule that matches horizontal movement.
 - **FR-003**: The game MUST allow the player to move left and right using the left/right arrow keys or A/D, and jump using the up arrow, W, or Space.
 - **FR-004**: The game MUST apply gravity so the character falls toward the bottom of the level unless it is standing on a platform, and must remain grounded while touching a solid surface.
@@ -96,11 +96,11 @@ The player sees a clear level start and end presentation, including text and tra
 - **FR-007**: The game MUST include a start platform that is the left-end section of the full-width floor platform, coloured orange. The player must always begin standing on this orange section.
 - **FR-008**: The game MUST include a finish flag of similar size to the character, using a black-and-white checker pattern before completion and a red-and-white checker pattern after completion.
 - **FR-009**: The game MUST complete the level when the character overlaps the flag, and must trigger the completion state immediately after overlap.
-- **FR-010**: The game MUST respawn the player at the start position after falling through a gap or other out-of-bounds hazard, with a 2 second delay before reappearing.
+- **FR-010**: The game MUST respawn the player at the start position after falling through a gap or other out-of-bounds hazard, with a 2 second delay before reappearing. The out-of-bounds trigger must occur when the top of the player character moves below the bottom of the visible screen.
 - **FR-011**: The game MUST automatically place optional mini bananas spaced exactly one banana-character-height apart, forming a continuous visible trail along the route from the start position to the finish flag. Each mini banana disappears when the player overlaps it.
 - **FR-012**: The game MUST show a start animation that displays "Level 1" for the first 3 seconds and reveals the player character emerging from the platform after that interval.
-- **FR-013**: The game MUST show a completion animation that displays "Level 1 Completed" falling from the top of the screen and settling near the middle before the player character disappears.
-- **FR-014**: All on-screen text MUST use yellow text on a black framed box with high enough visibility against the black background and game art.
+- **FR-013**: The game MUST show a completion animation that displays "Level 1 Completed" falling from the top of the screen and settling near the middle before the player character disappears. The player disappearance should occur after a 1.5 second delay.
+- **FR-014**: All on-screen text MUST use yellow text on a black framed box with high enough visibility against the black background and game art. Each letter must use a square pixel-art style size of approximately 1/5 of the screen height.
 - **FR-015**: The default level background MUST be plain black and all example images must be treated as artistic visual hints only. The dimensions of the example images are not relevant and must not be used to infer the size of any game element; the images illustrate the intended look and style, not the scale.
 - **FR-016**: The game MUST not maintain a score or collection counter, and collecting mini bananas MUST be optional without affecting the win condition or level progression.
 - **FR-017**: The game MUST keep the level small enough and readable enough that the whole area fits within a static view without camera scrolling.
@@ -114,7 +114,7 @@ The player sees a clear level start and end presentation, including text and tra
 The level layout is based on the hand-drawn sketch in `examples/level1.jpg`. The sketch dimensions are not a guide to sizing; refer to FR-018 through FR-021 for all measurements.
 
 - **Floor platform**: A single platform that spans the full width of the level along the bottom of the screen. The left-end section is coloured orange and is the player's start position.
-- **Elevated platform**: One floating platform, roughly centred horizontally and positioned at approximately mid-screen height. The finish flag sits on top of this platform. The player must jump up from the floor to reach it.
+- **Elevated platform**: One floating platform whose center x position aligns with the screen center x position and is positioned at approximately mid-screen height. The finish flag sits on top of this platform. The player must jump up from the floor to reach it.
 - **Left wall and right wall**: Automatically placed at the left and right edges of the level to bound the play area.
 - **Mini banana trail**: Mini bananas are automatically placed one banana-height apart along the route from the start: across the floor toward the elevated platform, then across the elevated platform toward the finish flag.
 
@@ -136,9 +136,9 @@ The level layout is based on the hand-drawn sketch in `examples/level1.jpg`. The
 
 - **SC-001**: A player can complete the first level in under 30 seconds without difficulty when following the intended route.
 - **SC-002**: The character can move left and right, jump, land on platforms, and recover from falling through a gap within the expected 2 second respawn delay.
-- **SC-003**: At least 90% of players who attempt the level can reach the finish flag without needing instructions beyond the on-screen controls and world layout.
+- **SC-003**: A two-tester playthrough passes if both testers can complete the level, the playthrough records 0 major bugs, and it records no more than 2 minor bugs.
 - **SC-004**: Collectible mini bananas are visible and collectable along the route, but they do not block the primary objective of completing the level.
-- **SC-005**: The start and completion sequences visibly reinforce the level flow and remain readable against the black background and platform colours.
+- **SC-005**: The start and completion sequences visibly reinforce the level flow and remain readable against the black background and platform colours, as judged by the two-tester playthrough.
 
 ## Assumptions
 
@@ -147,3 +147,6 @@ The level layout is based on the hand-drawn sketch in `examples/level1.jpg`. The
 - The project focuses on a retro 2D arcade feel rather than realism, so collision rules and sprite styling are intentionally simple and readable.
 - Artwork will be designed in-house using the reference examples as visual guidance for style and appearance only, not as exact source assets. The pixel dimensions of the example images carry no meaning and must not be used to determine the size of any character, platform, flag, or other game element.
 - The project does not require a score system, a time penalty, or a collectible counter for the MVP.
+- Validation will be done by two testers where possible, and bugs will be logged instead of scored.
+- MVP accessibility scope is intentionally limited to keyboard play and readable text; remapping, reduced motion, and other accessibility features are out of scope unless added later.
+- Supported desktop browsers for the MVP are the latest two major versions of Chrome, Firefox, and Edge.

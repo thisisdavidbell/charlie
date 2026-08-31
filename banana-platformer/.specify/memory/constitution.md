@@ -48,6 +48,8 @@ This is a fun personal project, not a commercial product or app launch effort. T
 
 All meaningful additions must be reviewed against the constitution before they are merged into the main project direction. Changes that alter movement feel, hazard logic, win conditions, or collectible design require explicit check against the player-first and collectible-driven progression principles.
 
+Decisions captured in chat must be written back into the relevant specification artifacts (`spec.md`, `plan.md`, `tasks.md`, and related traceability docs) before implementation begins. The chat is a discussion channel; the written docs are the source of truth for the project.
+
 The default workflow is:
 - define the intended game behavior in plain terms;
 - test the behavior before implementation;
@@ -55,7 +57,11 @@ The default workflow is:
 - verify the result in the playable loop;
 - document any intentional design trade-off that affects fun, readability, or retro style.
 
+Requirement-to-test traceability is required for gameplay decisions that affect movement, collision, completion, respawn, or presentation timing.
+
 This project values short feedback loops and visible progress. A feature is considered acceptable only when it improves the banana platformer feel, clarity, or completeness without weakening the original design goals.
+
+For the MVP, the intended playtest and support scope is desktop web browsers with keyboard input only. Additional accessibility features may be added later, but they are not mandatory for the initial release.
 
 ## Governance
 

@@ -126,13 +126,19 @@ If you strongly prefer Python learning flow, Option B is a valid second-best pat
 **Project Type**: Single-project web game
 
 **Performance Goals**:
-- Stable 60 FPS on mainstream laptop hardware
+- Stable average 60 FPS on mainstream laptop hardware
+- Acceptable dips no lower than 50 FPS on mainstream laptop hardware
 - Input-to-motion latency perceived as immediate (< 100 ms end-to-end)
+
+**Browser Support**: Latest two major versions of Chrome, Firefox, and Edge on desktop
 
 **Constraints**:
 - Static camera only (no scrolling)
 - 8-bit readability and high-contrast visuals
 - Keep systems small and modular; avoid heavyweight engines
+- MVP accessibility scope is limited to keyboard controls and readable UI text; advanced accessibility features are out of scope for this phase
+
+**Traceability**: Requirement IDs (FR/SC) must be linked to tests in a dedicated traceability table and echoed in test names or comments
 
 **Scale/Scope**:
 - MVP: one level, one player character, optional collectibles, one finish condition
