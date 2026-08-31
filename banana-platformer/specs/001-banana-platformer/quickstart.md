@@ -49,11 +49,13 @@ Watch mode (optional while developing):
 npm run test:watch
 ```
 
-Smoke browser test:
+Manual acceptance checklist:
 
 ```bash
-npm run test:smoke
+npm run test:manual
 ```
+
+Then follow the checklist in `specs/001-banana-platformer/manual-test-checklist.md`.
 
 ## Suggested npm Scripts
 
@@ -64,7 +66,15 @@ npm run test:smoke
 - format: prettier --check .
 - test: vitest run
 - test:watch: vitest
-- test:smoke: playwright test
+- test:manual: run structured manual acceptance checklist
+
+## Script Validation Status
+
+Validated on 2026-08-31 in this workspace:
+- npm install: PASS
+- npm run lint: PASS
+- npm run test: PASS
+- npm run build: PASS
 
 ## First Implementation Checklist
 
@@ -80,7 +90,7 @@ npm run test:smoke
 
 Re-evaluate stack only if one of the following occurs:
 - Build/test toolchain repeatedly blocks progress for more than one day.
-- Browser smoke tests are unstable after basic stabilization.
+- Unit/integration test reliability is unstable after basic stabilization.
 - Team cannot maintain TypeScript project structure despite agreed conventions.
 
 If triggered, use documented fallback options in plan.md and research.md.

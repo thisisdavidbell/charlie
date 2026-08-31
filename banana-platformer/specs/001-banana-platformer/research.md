@@ -2,7 +2,7 @@
 
 ## Decision Summary
 
-Final implementation choice: TypeScript + PixiJS + Vite + Vitest (+ Playwright smoke tests).
+Final implementation choice: TypeScript + PixiJS + Vite + Vitest.
 
 Fallback options intentionally retained:
 - Option B: Python 3 + Pygame CE + pytest
@@ -12,7 +12,7 @@ Fallback options intentionally retained:
 
 - Reliability for core gameplay logic (movement, collision, completion state)
 - Maintainability as features expand (more levels, hazards, simple enemies)
-- Easy automated testing (logic first, smoke gameplay checks)
+- Practical testing in constrained environments (logic first, structured manual gameplay checks)
 - Strong fit for crisp 8-bit visual style
 - Lightweight approach that respects project constitution (no heavyweight game engine)
 
@@ -104,10 +104,10 @@ Reason:
 Chosen approach:
 - Unit tests: physics, collision, pickup collection, finish detection, respawn timing.
 - Integration tests: scene-level update with mocked input timeline.
-- Smoke test: browser launch and basic control responsiveness.
+- Manual acceptance checklist: browser launch, controls, sequence readability, and completion flow.
 
 Reason:
-- Fast feedback at unit level plus confidence that the game boots and plays.
+- Fast feedback at unit level plus practical confidence that the game boots and plays in supported desktop browsers.
 
 ## Risks and Mitigations
 
@@ -118,10 +118,15 @@ Risk: Jump feel and collisions regress as new features are added.
 Mitigation: Add behavior tests before changes and maintain tuning constants in one config module.
 
 Risk: Browser differences affect behavior.
-Mitigation: Keep one Playwright smoke test across Chromium and Firefox.
+Mitigation: Run a structured manual browser matrix checklist across Chrome, Firefox, and Edge.
 
 Risk: Team may need to switch stack later.
 Mitigation: Keep alternative options and tradeoffs documented in plan.md and this research file.
+
+## Environment Note
+
+- In the current Linux Mint environment, Playwright browser execution requires system dependencies that are not installable without elevated access.
+- The delivery path remains fully viable by prioritizing Vitest unit/integration coverage plus structured manual playtesting.
 
 ## Final Research Recommendation
 

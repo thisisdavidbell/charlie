@@ -20,7 +20,7 @@ This section compares practical stacks for this project and user profile (non-te
 - Language: TypeScript
 - Rendering: PixiJS (2D rendering library)
 - Build/dev: Vite
-- Testing: Vitest (unit), Playwright (smoke end-to-end)
+- Testing: Vitest (unit and integration) + structured manual acceptance checks
 
 **Pros**
 - Strong maintainability from TypeScript static typing and editor tooling.
@@ -90,7 +90,7 @@ This section compares practical stacks for this project and user profile (non-te
 
 ## Final Recommendation
 
-Choose **Option A: TypeScript + PixiJS + Vite + Vitest (+ Playwright smoke tests)**.
+Choose **Option A: TypeScript + PixiJS + Vite + Vitest**.
 
 **Decision Status**: Finalized for current implementation phase.
 
@@ -112,14 +112,16 @@ If you strongly prefer Python learning flow, Option B is a valid second-best pat
 - `pixi.js` (rendering)
 - `vite` (dev server/build)
 - `vitest` (unit tests)
-- `playwright` (smoke browser test)
 - `eslint` + `@typescript-eslint/*` + `prettier` (quality/consistency)
 
 **Storage**: N/A for MVP (optional localStorage later for settings only)
 
 **Testing**:
 - Unit: `vitest` for physics, collision, collectible handling, level completion, respawn timer logic
-- Integration/smoke: `playwright` for basic launch and input sanity
+- Integration: `vitest` integration tests for scene updates and input timelines
+- Manual acceptance: structured two-tester checklist and bug log for end-to-end play validation
+
+**Environment Constraint**: Playwright browser automation is not required in the current Linux Mint environment due unavailable system dependencies and limited sudo access.
 
 **Target Platform**: Desktop and laptop web browsers (latest Chrome/Firefox/Edge)
 
@@ -150,7 +152,7 @@ If you strongly prefer Python learning flow, Option B is a valid second-best pat
 
 - **I. Player-First Gameplay**: PASS. Stack supports deterministic movement and collision testing.
 - **II. 8-Bit Integrity**: PASS. Pixel rendering, constrained palette, and sprite-based visuals are first-class.
-- **III. Test-First Iteration**: PASS. Vitest + Playwright allow fail-then-fix loops.
+- **III. Test-First Iteration**: PASS. Vitest plus manual acceptance checks allow fail-then-fix loops.
 - **IV. Collectible-Driven Progression**: PASS. Optional collectible state is easy to enforce in pure logic.
 - **V. Simple, Playable Delivery**: PASS. Lightweight web stack, no heavyweight engine.
 
@@ -190,11 +192,10 @@ banana-platformer/
 ├── tests/
 │   ├── unit/
 │   ├── integration/
-│   └── smoke/
+│   └── manual/
 ├── package.json
 ├── tsconfig.json
-├── vite.config.ts
-└── playwright.config.ts
+└── vite.config.ts
 ```
 
 **Structure Decision**: Single TypeScript web game with strict separation between pure game logic (`src/game`) and rendering/input adapters (`src/render`, `src/input`) to maximize testability and maintainability.

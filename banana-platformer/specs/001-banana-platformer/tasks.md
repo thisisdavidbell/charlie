@@ -18,16 +18,16 @@
 
 **Purpose**: Initialize TypeScript + PixiJS + Vite + Vitest project tooling and baseline structure
 
-- [ ] T001 Initialize npm project metadata and scripts in banana-platformer/package.json
+- [x] T001 Initialize npm project metadata and scripts in banana-platformer/package.json
 - [ ] T002 Install and lock runtime/dev dependencies in banana-platformer/package-lock.json
-- [ ] T003 Configure TypeScript compiler options in banana-platformer/tsconfig.json
-- [ ] T004 [P] Configure Vite development and build settings in banana-platformer/vite.config.ts
-- [ ] T005 [P] Configure Vitest settings and test environment in banana-platformer/vitest.config.ts
-- [ ] T006 [P] Configure Playwright smoke test runner in banana-platformer/playwright.config.ts
-- [ ] T007 [P] Configure linting and formatting rules in banana-platformer/eslint.config.js
-- [ ] T008 [P] Add formatting defaults and ignore patterns in banana-platformer/.prettierrc
-- [ ] T009 Create app entry HTML shell for canvas host in banana-platformer/index.html
-- [ ] T010 Create base source and test directory structure with placeholders in banana-platformer/src/main.ts
+- [x] T003 Configure TypeScript compiler options in banana-platformer/tsconfig.json
+- [x] T004 [P] Configure Vite development and build settings in banana-platformer/vite.config.ts
+- [x] T005 [P] Configure Vitest settings and test environment in banana-platformer/vitest.config.ts
+- [x] T006 [P] Configure manual acceptance test workflow in banana-platformer/specs/001-banana-platformer/manual-test-checklist.md
+- [x] T007 [P] Configure linting and formatting rules in banana-platformer/eslint.config.js
+- [x] T008 [P] Add formatting defaults and ignore patterns in banana-platformer/.prettierrc
+- [x] T009 Create app entry HTML shell for canvas host in banana-platformer/index.html
+- [x] T010 Create base source and test directory structure with placeholders in banana-platformer/src/main.ts
 
 ---
 
@@ -37,19 +37,19 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T011 Record agreed requirement clarifications from chat in banana-platformer/specs/001-banana-platformer/spec.md
-- [ ] T012 Define shared runtime types and entity interfaces in banana-platformer/src/game/entities/types.ts
-- [ ] T013 [P] Define gameplay constants (sizes, timings, visibility, 60 FPS average / 50 FPS floor target, and browser support) in banana-platformer/src/game/config/gameConstants.ts
-- [ ] T014 [P] Implement normalized input state mapper for Arrow and A/W/D keys in banana-platformer/src/input/keyboardInput.ts
-- [ ] T015 [P] Implement fixed timestep simulation loop in banana-platformer/src/game/systems/fixedStepLoop.ts
-- [ ] T016 Implement geometry primitives and overlap checks in banana-platformer/src/game/physics/collision.ts
-- [ ] T017 Implement level metrics and coordinate helpers in banana-platformer/src/game/level/layoutMetrics.ts
-- [ ] T018 Implement level builder for floor, elevated platform, walls, flag, and pickup route in banana-platformer/src/game/level/buildLevel1.ts
-- [ ] T019 Implement game session state machine (intro, playing, respawning, completed) in banana-platformer/src/game/systems/gameSession.ts
-- [ ] T020 [P] Initialize Pixi application with pixel rendering settings in banana-platformer/src/render/pixiApp.ts
-- [ ] T021 [P] Create scene graph bootstrap and layer containers in banana-platformer/src/render/sceneGraph.ts
-- [ ] T022 Create deterministic simulation test harness utilities in banana-platformer/tests/unit/helpers/simHarness.ts
-- [ ] T023 Create requirements-to-tests traceability matrix scaffold using FR/SC IDs in banana-platformer/specs/001-banana-platformer/traceability.md
+- [x] T011 Record agreed requirement clarifications from chat in banana-platformer/specs/001-banana-platformer/spec.md
+- [x] T012 Define shared runtime types and entity interfaces in banana-platformer/src/game/entities/types.ts
+- [x] T013 [P] Define gameplay constants (sizes, timings, visibility, 60 FPS average / 50 FPS floor target, and browser support) in banana-platformer/src/game/config/gameConstants.ts
+- [x] T014 [P] Implement normalized input state mapper for Arrow and A/W/D keys in banana-platformer/src/input/keyboardInput.ts
+- [x] T015 [P] Implement fixed timestep simulation loop in banana-platformer/src/game/systems/fixedStepLoop.ts
+- [x] T016 Implement geometry primitives and overlap checks in banana-platformer/src/game/physics/collision.ts
+- [x] T017 Implement level metrics and coordinate helpers in banana-platformer/src/game/level/layoutMetrics.ts
+- [x] T018 Implement level builder for floor, elevated platform, walls, flag, and pickup route in banana-platformer/src/game/level/buildLevel1.ts
+- [x] T019 Implement game session state machine (intro, playing, respawning, completed) in banana-platformer/src/game/systems/gameSession.ts
+- [x] T020 [P] Initialize Pixi application with pixel rendering settings in banana-platformer/src/render/pixiApp.ts
+- [x] T021 [P] Create scene graph bootstrap and layer containers in banana-platformer/src/render/sceneGraph.ts
+- [x] T022 Create deterministic simulation test harness utilities in banana-platformer/tests/unit/helpers/simHarness.ts
+- [x] T023 Create requirements-to-tests traceability matrix scaffold using FR/SC IDs in banana-platformer/specs/001-banana-platformer/traceability.md
 
 **Checkpoint**: Foundation ready - user story implementation can now begin
 
@@ -63,19 +63,19 @@
 
 ### Tests for User Story 1
 
-- [ ] T024 [P] [US1] Add movement and facing unit tests in banana-platformer/tests/unit/us1-movement.test.ts
-- [ ] T025 [P] [US1] Add jump, gravity, and single-jump lockout tests in banana-platformer/tests/unit/us1-jump-gravity.test.ts
-- [ ] T026 [P] [US1] Add control mapping integration test for Arrow and A/W/D inputs in banana-platformer/tests/integration/us1-controls.integration.test.ts
+- [x] T024 [P] [US1] Add movement and facing unit tests in banana-platformer/tests/unit/us1-movement.test.ts
+- [x] T025 [P] [US1] Add jump, gravity, and single-jump lockout tests in banana-platformer/tests/unit/us1-jump-gravity.test.ts
+- [x] T026 [P] [US1] Add control mapping integration test for Arrow and A/W/D inputs in banana-platformer/tests/integration/us1-controls.integration.test.ts
 
 ### Implementation for User Story 1
 
-- [ ] T027 [US1] Implement player movement and facing update system in banana-platformer/src/game/systems/playerController.ts
-- [ ] T028 [US1] Implement vertical motion integration and gravity application in banana-platformer/src/game/physics/verticalMotion.ts
-- [ ] T029 [US1] Implement ground contact resolution for stable landing in banana-platformer/src/game/physics/groundResolver.ts
-- [ ] T030 [US1] Render banana player with direction-facing visual update in banana-platformer/src/render/playerSprite.ts
-- [ ] T031 [US1] Wire input, simulation step, and player systems in banana-platformer/src/game/scenes/levelScene.ts
-- [ ] T032 [US1] Connect scene startup and update loop in banana-platformer/src/main.ts
-- [ ] T033 [US1] Map US1 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
+- [x] T027 [US1] Implement player movement and facing update system in banana-platformer/src/game/systems/playerController.ts
+- [x] T028 [US1] Implement vertical motion integration and gravity application in banana-platformer/src/game/physics/verticalMotion.ts
+- [x] T029 [US1] Implement ground contact resolution for stable landing in banana-platformer/src/game/physics/groundResolver.ts
+- [x] T030 [US1] Render banana player with direction-facing visual update in banana-platformer/src/render/playerSprite.ts
+- [x] T031 [US1] Wire input, simulation step, and player systems in banana-platformer/src/game/scenes/levelScene.ts
+- [x] T032 [US1] Connect scene startup and update loop in banana-platformer/src/main.ts
+- [x] T033 [US1] Map US1 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
 
 **Checkpoint**: User Story 1 should be fully functional and independently testable
 
@@ -83,24 +83,24 @@
 
 ## Phase 4: User Story 2 - Explore platforms and avoid walls while progressing (Priority: P1)
 
-**Goal**: Deliver one-way platform behavior (up allowed downnot alllowed), wall blocking, and static level boundaries
+**Goal**: Deliver one-way platform behavior (up allowed, down not allowed), wall blocking, and static level boundaries
 
 **Independent Test**: Player can jump through one-way platforms from below, land from above, and cannot pass through vertical walls or leave play area
 
 ### Tests for User Story 2
 
-- [ ] T034 [P] [US2] Add one-way platform behavior unit tests in banana-platformer/tests/unit/us2-oneway-platforms.test.ts
-- [ ] T035 [P] [US2] Add wall collision and boundary clamp unit tests in banana-platformer/tests/unit/us2-walls-bounds.test.ts
-- [ ] T036 [P] [US2] Add traversal integration test for floor-to-elevated route in banana-platformer/tests/integration/us2-platform-traversal.integration.test.ts
+- [x] T034 [P] [US2] Add one-way platform behavior unit tests in banana-platformer/tests/unit/us2-oneway-platforms.test.ts
+- [x] T035 [P] [US2] Add wall collision and boundary clamp unit tests in banana-platformer/tests/unit/us2-walls-bounds.test.ts
+- [x] T036 [P] [US2] Add traversal integration test for floor-to-elevated route in banana-platformer/tests/integration/us2-platform-traversal.integration.test.ts
 
 ### Implementation for User Story 2
 
-- [ ] T037 [US2] Implement one-way platform collision solver in banana-platformer/src/game/physics/oneWayPlatform.ts
-- [ ] T038 [US2] Implement wall and world-boundary lateral blockers in banana-platformer/src/game/physics/bounds.ts
-- [ ] T039 [US2] Integrate platform and wall collision order in banana-platformer/src/game/scenes/levelScene.ts
-- [ ] T040 [US2] Render floor, elevated platform, and wall visuals with retro game style in banana-platformer/src/render/levelSprites.ts
-- [ ] T041 [US2] Validate platform center and vertical spacing constants in banana-platformer/src/game/level/layoutMetrics.ts
-- [ ] T042 [US2] Map US2 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
+- [x] T037 [US2] Implement one-way platform collision solver in banana-platformer/src/game/physics/oneWayPlatform.ts
+- [x] T038 [US2] Implement wall and world-boundary lateral blockers in banana-platformer/src/game/physics/bounds.ts
+- [x] T039 [US2] Integrate platform and wall collision order in banana-platformer/src/game/scenes/levelScene.ts
+- [x] T040 [US2] Render floor, elevated platform, and wall visuals with retro game style in banana-platformer/src/render/levelSprites.ts
+- [x] T041 [US2] Validate platform center and vertical spacing constants in banana-platformer/src/game/level/layoutMetrics.ts
+- [x] T042 [US2] Map US2 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
 
 **Checkpoint**: User Stories 1 and 2 both function independently
 
@@ -114,20 +114,20 @@
 
 ### Tests for User Story 3
 
-- [ ] T043 [P] [US3] Add one-time collectible pickup unit tests in banana-platformer/tests/unit/us3-collectibles.test.ts
-- [ ] T044 [P] [US3] Add flag completion and optional-collectible unit tests in banana-platformer/tests/unit/us3-flag-completion.test.ts
-- [ ] T045 [P] [US3] Add respawn timing and reset-state unit tests in banana-platformer/tests/unit/us3-respawn.test.ts
-- [ ] T046 [P] [US3] Add end-to-end level completion integration test in banana-platformer/tests/integration/us3-level-completion.integration.test.ts
+- [x] T043 [P] [US3] Add one-time collectible pickup unit tests in banana-platformer/tests/unit/us3-collectibles.test.ts
+- [x] T044 [P] [US3] Add flag completion and optional-collectible unit tests in banana-platformer/tests/unit/us3-flag-completion.test.ts
+- [x] T045 [P] [US3] Add respawn timing and reset-state unit tests in banana-platformer/tests/unit/us3-respawn.test.ts
+- [x] T046 [P] [US3] Add end-to-end level completion integration test in banana-platformer/tests/integration/us3-level-completion.integration.test.ts
 
 ### Implementation for User Story 3
 
-- [ ] T047 [US3] Implement mini-banana placement and collection system in banana-platformer/src/game/systems/collectiblesSystem.ts
-- [ ] T048 [US3] Implement finish flag overlap and completion state transition in banana-platformer/src/game/systems/flagSystem.ts
-- [ ] T049 [US3] Implement hazard boundary detection (player top below screen) in banana-platformer/src/game/systems/hazardSystem.ts
-- [ ] T050 [US3] Implement respawn scheduler and player reset behavior in banana-platformer/src/game/systems/respawnSystem.ts
-- [ ] T051 [US3] Render mini bananas and flag state color swap in banana-platformer/src/render/objectSprites.ts
-- [ ] T052 [US3] Integrate collectible, flag, hazard, and respawn systems in banana-platformer/src/game/scenes/levelScene.ts
-- [ ] T053 [US3] Map US3 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
+- [x] T047 [US3] Implement mini-banana placement and collection system in banana-platformer/src/game/systems/collectiblesSystem.ts
+- [x] T048 [US3] Implement finish flag overlap and completion state transition in banana-platformer/src/game/systems/flagSystem.ts
+- [x] T049 [US3] Implement hazard boundary detection (player top below screen) in banana-platformer/src/game/systems/hazardSystem.ts
+- [x] T050 [US3] Implement respawn scheduler and player reset behavior in banana-platformer/src/game/systems/respawnSystem.ts
+- [x] T051 [US3] Render mini bananas and flag state color swap in banana-platformer/src/render/objectSprites.ts
+- [x] T052 [US3] Integrate collectible, flag, hazard, and respawn systems in banana-platformer/src/game/scenes/levelScene.ts
+- [x] T053 [US3] Map US3 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
 
 **Checkpoint**: User Stories 1, 2, and 3 are independently functional
 
@@ -141,17 +141,17 @@
 
 ### Tests for User Story 4
 
-- [ ] T054 [P] [US4] Add intro timing and reveal unit tests in banana-platformer/tests/unit/us4-intro-sequence.test.ts
-- [ ] T055 [P] [US4] Add completion sequence timing unit tests (including 1.5s delay) in banana-platformer/tests/unit/us4-completion-sequence.test.ts
-- [ ] T056 [P] [US4] Add sequence integration test from intro to completed state in banana-platformer/tests/integration/us4-sequences.integration.test.ts
+- [x] T054 [P] [US4] Add intro timing and reveal unit tests in banana-platformer/tests/unit/us4-intro-sequence.test.ts
+- [x] T055 [P] [US4] Add completion sequence timing unit tests (including 1.5s delay) in banana-platformer/tests/unit/us4-completion-sequence.test.ts
+- [x] T056 [P] [US4] Add sequence integration test from intro to completed state in banana-platformer/tests/integration/us4-sequences.integration.test.ts
 
 ### Implementation for User Story 4
 
-- [ ] T057 [US4] Implement intro sequence state transitions and timers in banana-platformer/src/game/systems/introSystem.ts
-- [ ] T058 [US4] Implement completion sequence timing and player disappearance in banana-platformer/src/game/systems/completionSystem.ts
-- [ ] T059 [US4] Implement yellow-on-black framed UI text box renderer with agreed text sizing in banana-platformer/src/render/uiTextBox.ts
-- [ ] T060 [US4] Integrate intro and completion animation systems in banana-platformer/src/game/scenes/levelScene.ts
-- [ ] T061 [US4] Map US4 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
+- [x] T057 [US4] Implement intro sequence state transitions and timers in banana-platformer/src/game/systems/introSystem.ts
+- [x] T058 [US4] Implement completion sequence timing and player disappearance in banana-platformer/src/game/systems/completionSystem.ts
+- [x] T059 [US4] Implement yellow-on-black framed UI text box renderer with agreed text sizing in banana-platformer/src/render/uiTextBox.ts
+- [x] T060 [US4] Integrate intro and completion animation systems in banana-platformer/src/game/scenes/levelScene.ts
+- [x] T061 [US4] Map US4 requirements to tests in banana-platformer/specs/001-banana-platformer/traceability.md
 
 **Checkpoint**: All user stories are independently functional
 
@@ -161,14 +161,14 @@
 
 **Purpose**: Final quality, compatibility, and delivery-readiness checks across all stories
 
-- [ ] T062 [P] Add browser smoke test for game boot and basic controls in ban futre ana-platformer/tests/smoke/gameplay.smoke.spec.ts
-- [ ] T063 [P] Add multi-browser matrix (Chromium, Firefox, Edge channel) to smoke config in banana-platformer/playwright.config.ts
-- [ ] T064 [P] Add performance probe helper for FPS floor checks in banana-platformer/tests/integration/helpers/performanceProbe.ts
-- [ ] T065 [P] Document browser support and accessibility scope decision in banana-platformer/specs/001-banana-platformer/quickstart.md
-- [ ] T066 [P] Create 2-tester bug-log template and severity definitions in banana-platformer/specs/001-banana-platformer/playtest-report-template.md
-- [ ] T067 [P] Complete FR/SC to test-case traceability mapping in banana-platformer/specs/001-banana-platformer/traceability.md
-- [ ] T068 Run lint, unit, integration, and smoke test commands and record outcomes in banana-platformer/specs/001-banana-platformer/playtest-results.md
-- [ ] T069 Validate quickstart commands against actual project scripts in banana-platformer/specs/001-banana-platformer/quickstart.md
+- [x] T062 [P] Add manual end-to-end acceptance checklist mapped to FR/SC in banana-platformer/specs/001-banana-platformer/manual-test-checklist.md
+- [x] T063 [P] Add browser compatibility manual verification steps for Chrome, Firefox, and Edge in banana-platformer/specs/001-banana-platformer/manual-test-checklist.md
+- [x] T064 [P] Add performance probe helper for FPS floor checks in banana-platformer/tests/integration/helpers/performanceProbe.ts
+- [x] T065 [P] Document browser support and accessibility scope decision in banana-platformer/specs/001-banana-platformer/quickstart.md
+- [x] T066 [P] Create 2-tester bug-log template and severity definitions in banana-platformer/specs/001-banana-platformer/playtest-report-template.md
+- [x] T067 [P] Complete FR/SC to test-case traceability mapping in banana-platformer/specs/001-banana-platformer/traceability.md
+- [x] T068 Run lint, unit, and integration test commands and record outcomes in banana-platformer/specs/001-banana-platformer/playtest-results.md
+- [x] T069 Validate quickstart commands against actual project scripts in banana-platformer/specs/001-banana-platformer/quickstart.md
 
 ---
 
