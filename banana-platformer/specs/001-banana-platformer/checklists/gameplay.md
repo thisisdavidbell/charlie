@@ -17,10 +17,10 @@
 
 ## Requirement Clarity
 
-- [ ] CHK005 Is the phrase "fixed full-screen view" defined clearly enough to avoid ambiguity between browser viewport sizing and in-game coordinate system sizing? [Clarity, Ambiguity, Spec FR-001]
-- [ ] CHK006 Is "high enough visibility" for yellow text on a black framed box defined with objective readability criteria? [Clarity, Ambiguity, Spec FR-014]
-- [ ] CHK007 Is "roughly centred horizontally" for elevated platform placement clarified with a measurable tolerance or range? [Clarity, Ambiguity, Spec Level Layout]
-- [ ] CHK008 Is the respawn hazard boundary defined precisely enough to avoid inconsistent interpretations of when fall detection should trigger? [Clarity, Ambiguity, Spec FR-010, Spec Edge Cases]
+- [x] CHK005 Is the phrase "fixed full-screen view" defined clearly enough to avoid ambiguity between browser viewport sizing and in-game coordinate system sizing? [Clarity, Ambiguity, Spec FR-001]
+- [x] CHK006 Is "high enough visibility" for yellow text on a black framed box defined with objective readability criteria? [Clarity, Ambiguity, Spec FR-014]
+- [x] CHK007 Is "roughly centred horizontally" for elevated platform placement clarified with a measurable tolerance or range? [Clarity, Ambiguity, Spec Level Layout]
+- [x] CHK008 Is the respawn hazard boundary defined precisely enough to avoid inconsistent interpretations of when fall detection should trigger? [Clarity, Ambiguity, Spec FR-010, Spec Edge Cases]
 
 ## Requirement Consistency
 
@@ -33,26 +33,26 @@
 
 - [x] CHK013 Are movement and collision acceptance scenarios measurable enough to produce deterministic pass/fail outcomes without subjective interpretation? [Measurability, Spec User Story 1, Spec User Story 2]
 - [x] CHK014 Is the respawn delay requirement measurable and aligned across requirements and success criteria references? [Measurability, Spec FR-010, Spec SC-002]
-- [ ] CHK015 Are success criteria thresholds defined with clear counting methods for player completion and readability outcomes? [Measurability, Ambiguity, Spec SC-001, Spec SC-003, Spec SC-005]
+- [x] CHK015 Are success criteria thresholds defined with clear counting methods for player completion and readability outcomes? [Measurability, Ambiguity, Spec SC-001, Spec SC-003, Spec SC-005]
 
 ## Scenario and Edge Case Coverage
 
 - [x] CHK016 Are alternate traversal paths (minimal collectible pickup versus exploratory pickup) covered sufficiently by requirements and scenarios? [Coverage, Spec User Story 3, Spec FR-016]
 - [x] CHK017 Are airborne input edge cases fully covered for jump behavior and prevention of unintended multi-jump outcomes? [Coverage, Spec Edge Cases, Spec FR-003]
 - [x] CHK018 Are boundary collision edge cases covered for both continuous input and repeated wall contact behavior? [Coverage, Spec Edge Cases, Spec FR-006]
-- [ ] CHK019 Are recovery flow requirements complete for respawn timing, state reset, and resumed control after falling out of bounds? [Coverage, Recovery, Spec FR-010, Spec SC-002]
+- [x] CHK019 Are recovery flow requirements complete for respawn timing, state reset, and resumed control after falling out of bounds? [Coverage, Recovery, Spec FR-010, Spec SC-002]
 
 ## Non-Functional Requirements and Dependencies
 
-- [ ] CHK020 Are responsiveness expectations defined with measurable thresholds for input feel or frame stability? [Gap, Non-Functional]
-- [ ] CHK021 Are compatibility requirements defined for supported browser versions, minimum display size, and keyboard layout assumptions? [Gap, Non-Functional]
-- [ ] CHK022 Are accessibility expectations for control discoverability, text readability, and color differentiation explicitly specified or intentionally excluded? [Gap, Non-Functional]
+- [x] CHK020 Are responsiveness expectations defined with measurable thresholds for input feel or frame stability? [Gap, Non-Functional]
+- [x] CHK021 Are compatibility requirements defined for supported browser versions, minimum display size, and keyboard layout assumptions? [Gap, Non-Functional]
+- [x] CHK022 Are accessibility expectations for control discoverability, text readability, and color differentiation explicitly specified or intentionally excluded? [Gap, Non-Functional]
 - [x] CHK023 Are dependency assumptions for in-house art production and reference-image usage constrained clearly enough to prevent scope drift? [Dependencies, Assumption, Spec Assumptions, Spec FR-015]
 
 ## Ambiguities and Conflict Resolution
 
-- [ ] CHK024 Is a formal requirement identifier and traceability mapping approach defined for linking scenarios, functional requirements, and success criteria through implementation and tests? [Gap, Traceability]
-- [ ] CHK025 Are any terms likely to create interpretation variance across reviewers (for example "small enough," "readable enough," "short delay") clarified with objective boundaries? [Ambiguity, Spec FR-017, Spec FR-013]
+- [x] CHK024 Is a formal requirement identifier and traceability mapping approach defined for linking scenarios, functional requirements, and success criteria through implementation and tests? [Gap, Traceability]
+- [x] CHK025 Are any terms likely to create interpretation variance across reviewers (for example "small enough," "readable enough," "short delay") clarified with objective boundaries? [Ambiguity, Spec FR-017, Spec FR-013]
 
 ## Notes
 

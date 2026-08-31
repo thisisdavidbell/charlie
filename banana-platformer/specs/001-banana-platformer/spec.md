@@ -103,11 +103,17 @@ The player sees a clear level start and end presentation, including text and tra
 - **FR-014**: All on-screen text MUST use yellow text on a black framed box with high enough visibility against the black background and game art. Each letter must use a square pixel-art style size of approximately 1/5 of the screen height.
 - **FR-015**: The default level background MUST be plain black and all example images must be treated as artistic visual hints only. The dimensions of the example images are not relevant and must not be used to infer the size of any game element; the images illustrate the intended look and style, not the scale.
 - **FR-016**: The game MUST not maintain a score or collection counter, and collecting mini bananas MUST be optional without affecting the win condition or level progression.
-- **FR-017**: The game MUST keep the level small enough and readable enough that the whole area fits within a static view without camera scrolling.
+- **FR-017**: The game MUST keep the level small enough and readable enough that the whole area fits within a static view without camera scrolling. At supported viewport sizes, all core gameplay elements (player, platforms, walls, flag, and visible route pickups) must remain visible without camera movement.
 - **FR-018**: The banana character, the finish flag, and all platforms MUST each have a height equal to 1/6 of the screen height. All three elements share this same height value.
 - **FR-019**: Walls MUST have a width equal to the banana character's height (i.e. 1/6 of the screen height) and MUST be placed automatically to bound the left and right edges of the level.
 - **FR-020**: Mini bananas MUST be half the size of the banana character in both width and height.
 - **FR-021**: The banana character's maximum jump height MUST be enough to land on the elevated platform with 1/4 of the banana character's own height of clearance above the platform's top surface at the peak of the jump.
+- **FR-022**: After a respawn, the player position, direction, velocity, and start-animation state MUST reset to their defined spawn defaults, and control MUST resume when respawn completes.
+- **FR-023**: Collectibles MUST remain collected across respawn events and MUST NOT be restored by respawning.
+- **FR-024**: MVP responsiveness targets MUST be an average of 60 FPS with dips no lower than 50 FPS on mainstream desktop/laptop hardware, and perceived input-to-motion latency under 100 ms.
+- **FR-025**: MVP browser compatibility MUST support the latest two major desktop versions of Chrome, Firefox, and Edge, with a minimum supported viewport of 1280x720.
+- **FR-026**: MVP accessibility scope MUST include keyboard play and readable on-screen text only. Key remapping, reduced motion, and additional accessibility features are intentionally out of scope for MVP.
+- **FR-027**: Requirement traceability MUST link each FR and SC to at least one test case using requirement IDs in test names or comments, and in a dedicated traceability table.
 
 ### Level Layout
 
@@ -138,7 +144,7 @@ The level layout is based on the hand-drawn sketch in `examples/level1.jpg`. The
 - **SC-002**: The character can move left and right, jump, land on platforms, and recover from falling through a gap within the expected 2 second respawn delay.
 - **SC-003**: A two-tester playthrough passes if both testers can complete the level, the playthrough records 0 major bugs, and it records no more than 2 minor bugs.
 - **SC-004**: Collectible mini bananas are visible and collectable along the route, but they do not block the primary objective of completing the level.
-- **SC-005**: The start and completion sequences visibly reinforce the level flow and remain readable against the black background and platform colours, as judged by the two-tester playthrough.
+- **SC-005**: The start and completion sequences visibly reinforce the level flow and remain readable against the black background and platform colours, with both testers confirming readability and sequence clarity and with no major readability bugs recorded.
 
 ## Assumptions
 
