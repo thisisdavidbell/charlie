@@ -6,9 +6,24 @@ export function buildLevel1(width: number, height: number): Level {
   const metrics = getLevelMetrics(width, height);
   const layout = deriveLayout(width, height);
 
+  const startWidth = Math.min(width, layout.unit * 2);
+
+  const start: Platform = {
+    id: "start",
+    rect: { x: 0, y: metrics.floorY, width: startWidth, height: layout.platformHeight },
+    type: "start",
+    color: "#ff8c00",
+    oneWay: true
+  };
+
   const floor: Platform = {
     id: "floor",
-    rect: { x: 0, y: metrics.floorY, width, height: layout.platformHeight },
+    rect: {
+      x: startWidth,
+      y: metrics.floorY,
+      width: Math.max(0, width - startWidth),
+      height: layout.platformHeight
+    },
     type: "floor",
     color: "#b5651d",
     oneWay: true
@@ -82,7 +97,7 @@ export function buildLevel1(width: number, height: number): Level {
     id: "level-1",
     width,
     height,
-    platforms: [floor, elevated],
+    platforms: [start, floor, elevated],
     walls,
     flag,
     miniBananas,

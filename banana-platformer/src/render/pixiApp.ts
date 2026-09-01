@@ -12,5 +12,7 @@ export async function createPixiApp(width: number, height: number): Promise<Appl
     autoDensity: true
   });
 
+  app.canvas.style.imageRendering = "pixelated";
+
   return app;
 }

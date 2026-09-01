@@ -1,4 +1,4 @@
-import { Container, Graphics } from "pixi.js";
+import { Container, Graphics, Sprite, type Texture } from "pixi.js";
 
 import type { Level } from "../game/entities/types";
 
@@ -7,7 +7,7 @@ export interface ObjectSprites {
   sync: () => void;
 }
 
-export function createObjectSprites(level: Level): ObjectSprites {
+export function createObjectSprites(level: Level, flagTexture: Texture): ObjectSprites {
   const node = new Container();
   const miniMap = new Map<string, Graphics>();
 
@@ -18,22 +18,17 @@ export function createObjectSprites(level: Level): ObjectSprites {
     node.addChild(sprite);
   }
 
-  const flag = new Graphics();
+  const flag = Sprite.from(flagTexture);
+  flag.roundPixels = true;
   node.addChild(flag);
 
   const drawFlag = () => {
-    flag.clear();
-    const { x, y, width } = level.flag.rect;
-    const colorA = level.flag.state === "completed" ? 0xff0000 : 0x000000;
-    const colorB = 0xffffff;
-    const tile = Math.max(2, Math.floor(width / 4));
-
-    for (let row = 0; row < 4; row += 1) {
-      for (let col = 0; col < 4; col += 1) {
-        const useA = (row + col) % 2 === 0;
-        flag.rect(x + col * tile, y + row * tile, tile, tile).fill(useA ? colorA : colorB);
-      }
-    }
+    const { x, y, width, height } = level.flag.rect;
+    flag.x = x;
+    flag.y = y;
+    flag.width = width;
+    flag.height = height;
+    flag.tint = level.flag.state === "completed" ? 0xd5ffd5 : 0xffffff;
   };
 
   drawFlag();
