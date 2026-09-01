@@ -38,3 +38,13 @@ npm run build
 ## Development
 
 See [DEVELOPMENT-PROCESS.md](DEVELOPMENT-PROCESS.md) for the project's spec-driven development process.
+
+
+
+## AI Assistance
+
+- The AI Agent must follow the users instructions at all times.
+- The AI Agent can make suggestions and provide feedback.
+- The AI Agent must never implement any changes without confirming with the user first.
+- The AI must never perform its own tasks, or implement ideas without confirmation.
+- The AI agent must never automtically pick an idea unless told to do so  
