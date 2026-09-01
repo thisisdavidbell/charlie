@@ -34,3 +34,7 @@ npm run build
 - The game starts in a browser from the Vite dev server URL (usually http://localhost:5173).
 - Manual acceptance steps are documented in specs/001-banana-platformer/manual-test-checklist.md.
 - Requirements-to-tests traceability is documented in specs/001-banana-platformer/traceability.md.
+
+## Development
+
+See [DEVELOPMENT-PROCESS.md](DEVELOPMENT-PROCESS.md) for the project's spec-driven development process.

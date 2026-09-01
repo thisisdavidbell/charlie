@@ -10,7 +10,7 @@
 
 ## Manual Playtest Sessions
 
-- Session 1: PENDING
+- Session 1: PASS (Charlie, 2026-08-31) - Level completed successfully in local run.
 - Session 2: PENDING
 
 ## Pass Criteria

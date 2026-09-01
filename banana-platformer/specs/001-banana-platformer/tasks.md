@@ -19,7 +19,7 @@
 **Purpose**: Initialize TypeScript + PixiJS + Vite + Vitest project tooling and baseline structure
 
 - [x] T001 Initialize npm project metadata and scripts in banana-platformer/package.json
-- [ ] T002 Install and lock runtime/dev dependencies in banana-platformer/package-lock.json
+- [x] T002 Install and lock runtime/dev dependencies in banana-platformer/package-lock.json
 - [x] T003 Configure TypeScript compiler options in banana-platformer/tsconfig.json
 - [x] T004 [P] Configure Vite development and build settings in banana-platformer/vite.config.ts
 - [x] T005 [P] Configure Vitest settings and test environment in banana-platformer/vitest.config.ts
