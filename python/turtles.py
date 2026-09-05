@@ -1,0 +1,12 @@
+import tkinter
+window = tkinter.Tk()
+canvas = tkinter.Canvas(window, width=400, height=400)
+canvas.pack()
+controlscreen = canvas.create_rectangle(0, 0, 175, 400, fill="black")
+up = canvas.create_rectangle(50, 50, 150, 150, fill="blue")
+down = canvas.create_rectangle(50, 200, 150, 300, fill="red")
+player = canvas.create_rectangle(200, 200, 300, 300, fill="green")
+canvas.tag_bind(up, "<Button-1>", lambda event: canvas.move(player, 0, -10))
+canvas.tag_bind(down, "<Button-1>", lambda event: canvas.move(player, 0, 10))
+canvas.focus_set()
+window.mainloop()
